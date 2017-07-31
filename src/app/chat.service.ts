@@ -1,6 +1,6 @@
 import { Injectable, OnInit } from '@angular/core';
 import { FirebaseService } from './firebase.service';
-import { ModalService } from './modal.service'
+import { ModalService } from './modal.service';
 
 @Injectable()
 export class ChatService {

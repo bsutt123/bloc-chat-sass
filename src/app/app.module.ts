@@ -6,7 +6,7 @@ import { environment } from '../environments/environment';
 import { FormsModule } from '@angular/forms';
 import { FirebaseService } from './firebase.service';
 import { ChatPanelComponent } from './chat-panel.component';
-import { ChatService } from './chat.service'
+import { ChatService } from './chat.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ModalComponent } from './modal.component';
 import { DialogResult } from './modal.component'
