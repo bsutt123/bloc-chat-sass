@@ -1,0 +1,19 @@
+.container {
+    float: left;
+    position: absolute;
+    left: 300px;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color: #BDBDBD;
+}
+.mat-card.message-box{
+    margin: 10px;
+    width:800px;
+    padding: 5px;
+    border: 2px;
+}
+
+.mat-card-footer {
+    text-align: right;
+}

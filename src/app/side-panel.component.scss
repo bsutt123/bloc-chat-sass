@@ -1,14 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
-
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-/*
 .panel {
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     width: 300px;
+    background-color:#B39DDB;
 }
 
 .current-room {
@@ -18,21 +14,14 @@
     font-size: 1.2rem;
     font-family: 'Zilla Slab', serif;
 }
-.current-room:hover {
-    cursor: default;
-}
 
-.mat-list .mat-list-item .mat-list-item-content {
-    height: 20px;
-    margin:5px;
-}
-
-.room-list:hover {
-    cursor: pointer;
-}
 
 .room-item {
     margin:0;
+}
+
+.room-item:hover{
+    cursor: default;
 }
 
 md-input-container.room-container {
@@ -51,4 +40,6 @@ button.mat-raised-button.new-room-button {
     margin: 0 50px 0 50px;
     line-height: 20px;
 }
-*/
+.mat-list-item.room-item-list {
+    height: 30px;
+}

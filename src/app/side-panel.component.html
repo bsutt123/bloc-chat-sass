@@ -1,0 +1,17 @@
+
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+<md-sidenav mode="side" opened="true" class="panel">
+    <div class="current-room"> Welcome to Bloc Chat! </div>
+    <md-list>
+        <md-list-item class="room" *ngFor="let room of roomsArray">
+            <span class="room-item"
+            (click)="setFeatured(room.$key)"> {{ room.name }} </span>
+        </md-list-item>
+    </md-list>
+    <form>
+        <md-input-container class="room-container">
+            <input mdInput class="new-row-input" placeholder="New room name" [(ngModel)]="newRoomName" name="newname">
+        </md-input-container>
+        <button md-raised-button class="new-room-button" (click)="addRoom()"> Create a new room! </button>
+    </form>
+<md-sidenav>
