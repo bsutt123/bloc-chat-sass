@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { FirebaseService } from './firebase.service';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
+import { ModalService } from './modal.service'
 
 
 @Component({
@@ -9,15 +10,14 @@ import { CookieService } from 'ngx-cookie-service';
     template: ` This is the Modal `
 })
 export class ModalComponent implements AfterViewInit {
-    username: string;
-    constructor(public dialog: MdDialog, public cookieService: CookieService) {}
+    constructor(public dialog: MdDialog, public cookieService: CookieService, public modalService: ModalService) {}
 
     ngAfterViewInit() {
         if (!this.cookieService.check('username')) {
             this.openDialogForCookie();
         } else {
-            this.username = this.cookieService.get('username')
-            console.log(this.username)
+            let username = this.cookieService.get('username')
+            this.modalService.setUsername(username);
         }
     }
 
@@ -28,8 +28,8 @@ export class ModalComponent implements AfterViewInit {
         let dialogRef = this.dialog.open(DialogResult, options);
         dialogRef.afterClosed().subscribe( (result) => {
             this.cookieService.set('username', result)
-            this.username = result
-            console.log(this.username)
+            let username = result;
+            this.modalService.setUsername(username);
         })
     }
 

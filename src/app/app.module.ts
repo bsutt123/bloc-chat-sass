@@ -20,6 +20,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { RoomsService } from './rooms.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ModalService } from './modal.service';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
-  providers: [ FirebaseService, CookieService, RoomsService, ChatService ],
+  providers: [ FirebaseService, CookieService, RoomsService, ChatService, ModalService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {

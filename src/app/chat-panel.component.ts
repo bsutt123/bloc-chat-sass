@@ -10,8 +10,14 @@ import { ChatService } from './chat.service';
 
 export class ChatPanelComponent {
     messagesList: any;
+    textContent: string;
 
     constructor(public chatService: ChatService) {
+    }
+
+    addMessage()  {
+        console.log(this.textContent)
+        this.chatService.addMessage(this.textContent);
     }
 
 }
