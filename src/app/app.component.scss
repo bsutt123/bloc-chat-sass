@@ -1,0 +1,24 @@
+*::before,
+*::after, {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+$color-primary: #ff5722;
+$color-primary-light: #ff8a50;
+$color-primary-dark: #c41c00;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-light-grey: #DDDDDD;
+$color-dark-grey: #222222;

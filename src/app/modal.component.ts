@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from './firebase.service';
 import { MdDialog, MdDialogRef } from '@angular/material';
 import { CookieService } from 'ngx-cookie-service';
@@ -7,12 +7,12 @@ import { ModalService } from './modal.service'
 
 @Component({
     selector: 'modal',
-    template: ` This is the Modal `
+    template: ``
 })
-export class ModalComponent implements AfterViewInit {
+export class ModalComponent implements OnInit {
     constructor(public dialog: MdDialog, public cookieService: CookieService, public modalService: ModalService) {}
 
-    ngAfterViewInit() {
+    ngOnInit() {
         if (!this.cookieService.check('username')) {
             this.openDialogForCookie();
         } else {
@@ -42,8 +42,8 @@ export class ModalComponent implements AfterViewInit {
     template: `<h1 md-dialog-title> What do you want your username to be? <h1>
                 <div md-dialog-actions>
                     <form>
-                        <input mdInput class="new-user-input" placeholder="New User Name" [(ngModel)]="username" name="newUserName">
-                        <button md-raised-button class="new-user-button" (click)="dialogRef.close(username)"> Create your Name! </button>
+                        <input class="new-user-input" placeholder="New User Name" [(ngModel)]="username" name="newUserName">
+                        <button class="btn new-user-button" (click)="dialogRef.close(username)"> Create your Name! </button>
                     </form>
                 <div>`
 })

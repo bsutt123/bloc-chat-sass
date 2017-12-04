@@ -1,37 +1,88 @@
-.container {
+$color-primary: #ff5722;
+$color-primary-light: #ff8a50;
+$color-primary-dark: #c41c00;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-light-grey: #DDDDDD;
+$color-dark-grey: #222222;
+
+.chat-panel {
     float: left;
     position: relative;
-    left: 300px;
-    width:100%;
-    height: 100%;
-    background-color: #BDBDBD;
-}
-.mat-card.message-box{
-    margin: 10px;
-    width:800px;
-    padding: 5px;
-    border: 2px;
+    top:0;
+    left:0;
+    width: 80%;
+    min-height: 100vh;
 }
 
-.mat-card-footer {
+.container {
+    float: left;
+    left: 20%;
+    top:0;
+    width: 80%;
+    margin-bottom:7rem;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+.message-box {
+    width:90%;
+    margin: 0 2rem;
+    background: $color-white;
+    border-radius: 3rem;
+    padding: 1rem;
+    
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+}
+
+.message-user {
+}
+
+.message-content {
+    margin-left: 1rem;
+}
+.message-time {
     text-align: right;
 }
 
 .input-box {
-    position: fixed;
+    float: left;
+    position: absolute;
     bottom:0;
-    left:300px;
-    right:0;
-    padding:5px;
-    background-color: #B39DDB;
+    height: 6rem;
+    width:100%;
+    z-index:1;
 }
-
 .new-message-content {
-    width:70%;
-    height: 36px;
+    position: relative;
+    width:75%;
+    height:6rem;
+    margin-bottom: -1rem;
 }
 
-button.mat-raised-button.new-message-button {
-    min-width: 50px;
-    min-height: 36px;
+.new-message-btn {
+    border: 0;
+    background-color:#c41c00;
+    color: white;
+    transition: all .2s;
+    padding: .5rem;
+    position: absolute;
+    top: 50%;
+    left: 87.5%;
+    transform: translate(-50%, -50%);
+    transition: all .2s;
+
+    &:hover{
+        transform: translate(-50%, -55%);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.4); 
+    }
+
+    &:active{
+        transform: translate(-50%, -52%);
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.4);
+    }
 }

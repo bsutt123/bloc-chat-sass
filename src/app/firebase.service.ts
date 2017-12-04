@@ -15,8 +15,4 @@ export class FirebaseService {
         this.db.list(ref).push(object);
     }
 
-    addMessagesObject(ref, key) {
-
-    }
-
 }

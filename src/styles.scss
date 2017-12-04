@@ -2,53 +2,57 @@
 
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
-/*
-.panel {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 300px;
+$color-light-grey: #DDDDDD;
+$color-primary: #ff5722;
+
+*,
+*::before,
+*::after, {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 
-.current-room {
-    position: relative;
-    width: 50%;
-    margin: 20px auto;
-    font-size: 1.2rem;
-    font-family: 'Zilla Slab', serif;
-}
-.current-room:hover {
-    cursor: default;
+html {
+    font-size: 62.5%;
 }
 
-.mat-list .mat-list-item .mat-list-item-content {
-    height: 20px;
-    margin:5px;
+body {
+    box-sizing: border-box;
+    font-family: 'Merriweather', sans-serif;
+    background: $color-light-grey;
+    z-index: 0;
 }
 
-.room-list:hover {
-    cursor: pointer;
+.side-panel-background {
+    background: $color-primary;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    width:20%;
+
 }
 
-.room-item {
-    margin:0;
-}
-
-md-input-container.room-container {
-    display: block;
-    width:200px;
-    margin: auto;
-}
-input.mat-input-element.new-room-input {
+.btn {
+    border: 0;
+    background-color:#c41c00;
     color: white;
+    transition: all .2s;
+    padding: .5rem;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1.5rem .75rem rgba(0,0,0,.4);
+    }
+
+    &:active{
+        transform: translateY(-2px);
+        box-shadow: 0 1rem .5rem rgba(0,0,0,.4);
+    }
 }
 
-button.mat-raised-button.new-room-button {
-    min-width:200px;
-    border:0;
-    padding:0;
-    margin: 0 50px 0 50px;
-    line-height: 20px;
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
-*/

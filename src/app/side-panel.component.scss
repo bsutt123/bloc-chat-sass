@@ -1,45 +1,65 @@
+$color-primary: #ff5722;
+$color-primary-light: #ff8a50;
+$color-primary-dark: #c41c00;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-light-grey: #DDDDDD;
+$color-dark-grey: #222222;
+
 .panel {
-    position: fixed;
+    position: relative;
+    float:left;
     left: 0;
     top: 0;
-    bottom: 0;
-    width: 300px;
-    background-color:#B39DDB;
+    width: 20%;
+    background-color: $color-primary;
 }
 
-.current-room {
-    position: relative;
-    width: 50%;
-    margin: 20px auto;
-    font-size: 1.2rem;
-    font-family: 'Zilla Slab', serif;
+.room-list {
+    list-style: none;
+    margin-left: 1rem;
 }
-
-
 .room-item {
     margin:0;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    transition: all .2s;
+    &:hover {
+        transform: translateX(1rem) scale(1.1);
+    }
 }
 
 .room-item:hover{
     cursor: default;
 }
 
-md-input-container.room-container {
-    display: block;
-    width:200px;
-    margin: auto;
+.room-container {
+    text-align: center;
 }
-input.mat-input-element.new-room-input {
-    color: white;
+.new-room-input {
+    width: 90%;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
 }
 
-button.mat-raised-button.new-room-button {
-    min-width:200px;
-    border:0;
-    padding:0;
-    margin: 0 50px 0 50px;
-    line-height: 20px;
+.new-room-btn {
+    width: 40%;
 }
-.mat-list-item.room-item-list {
-    height: 30px;
+.heading {
+    text-align:center;
+    margin: 1rem;
+}
+
+.heading-secondary {
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.heading-tertiary {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
 }

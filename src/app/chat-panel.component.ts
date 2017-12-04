@@ -16,7 +16,6 @@ export class ChatPanelComponent {
     }
 
     addMessage()  {
-        console.log(this.textContent)
         this.chatService.addMessage(this.textContent);
     }
 

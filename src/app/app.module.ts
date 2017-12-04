@@ -10,11 +10,7 @@ import { ChatService } from './chat.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ModalComponent } from './modal.component';
 import { DialogResult } from './modal.component'
-import { MdDialogModule,
-        MdButtonModule,
-        MdListModule,
-        MdInputModule,
-        MdCardModule
+import { MdDialogModule
         } from '@angular/material';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -40,10 +36,6 @@ import { ModalService } from './modal.service';
     BrowserAnimationsModule,
     FormsModule,
     MdDialogModule,
-    MdButtonModule,
-    MdListModule,
-    MdInputModule,
-    MdCardModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
