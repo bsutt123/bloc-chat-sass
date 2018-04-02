@@ -1,28 +1,25 @@
-# BlocChatSass
+# Chatty - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+This is a simple chatting service which is created as a slack like clone that uses Angular and Firebase Realtime Database to implement the frontend and backend respectively
 
-## Development server
+## Motivation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Chatty or a chatting service is general is what I use when I want to learn a new front end framework but I want to solve a problem that I already know most of the answers to. Its very interesting to get started with a new framework and see the kind of advantages and disadvantages that they have in comparison to the other frameworks.
 
-## Code scaffolding
+This version was actually the first version that I ever implemented, and as such is a bit... rougher around the edges. I have learned a lot in the time between making this project and now, and I find it exciting to see how I have improved and how much simpler it is to make this project in my more recent frameworks (like React and Vue).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Local Installation
 
-## Build
+After cloning the repository locally you can get started by just installing the dependencies and then the server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```bash
+npm install
+npm start
+```
 
-## Running unit tests
+You should be able to navigate to `http:localhost:3000` and see the site.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Future Work
 
-## Running end-to-end tests
+I do not intend to significantly change or add to this project, and as such there is no future work planned and I am not merging pull requests in
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
